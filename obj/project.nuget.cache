@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vNNM3WLB5GbdxF9NhmfOsqCP5d+25aRbC/8Jm+NsD5wMO+rW2FMV+RNifpDeHx9Z8OLeUP8P3qSlPzUzYU4N7A==",
+  "dgSpecHash": "5b7GsxeZ3iJwhzehLcXYr7Nr0MHn189FpdDEeT1xRbP2ALT9CeaV1+tsVFKfiMYFchXoy1FaPfmb6rrT4IpbVw==",
   "success": true,
   "projectFilePath": "/Users/firuzrazakov/Projects/authorization-service/authorization-service.csproj",
   "expectedPackageFiles": [
@@ -36,10 +36,10 @@
     "/Users/firuzrazakov/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/firuzrazakov/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
     "/Users/firuzrazakov/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.0/pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
-    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
-    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
-    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
-    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/firuzrazakov/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/firuzrazakov/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/firuzrazakov/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
     "/Users/firuzrazakov/.nuget/packages/system.composition/6.0.0/system.composition.6.0.0.nupkg.sha512",
