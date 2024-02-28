@@ -13,6 +13,25 @@ public class AppDbContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>()
+            .ToTable("Users");
         
+        // Настройка свойств сущности User
+        modelBuilder.Entity<User>()
+            .HasKey(u => u.Id); // Устанавливаем свойство Id как первичный ключ
+
+        modelBuilder.Entity<User>()
+            .Property(u => u.Email)
+            .IsRequired(); // Требуем, чтобы Email был обязательным
+
+        modelBuilder.Entity<User>()
+            .Property(u => u.Password)
+            .IsRequired(); // Требуем, чтобы Password был обязательным
+
+        modelBuilder.Entity<User>()
+            .Property(u => u.Role)
+            .IsRequired(); // Требуем, чтобы Role был обязательным
+
+        base.OnModelCreating(modelBuilder);
     }
 }
