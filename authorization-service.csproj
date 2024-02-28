@@ -20,10 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Migrations\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
     <Folder Include="Utilities\" />
   </ItemGroup>
