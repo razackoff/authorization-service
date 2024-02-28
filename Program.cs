@@ -1,4 +1,7 @@
 using authorization_service.Data;
+using authorization_service.Repositories;
+using authorization_service.Services;
+using authorization_service.Services.JWT;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +19,14 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+// Регистрация сервисов
+builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddSingleton<IJwtService>(provider => 
+    new JwtService("your_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_hereyour_secret_key_here", 100));
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,8 +35,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.MapIdentityApi<IdentityUser>();
 
 app.UseHttpsRedirection();
 
