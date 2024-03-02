@@ -1,5 +1,5 @@
+using authorization_service.DTOs;
 using authorization_service.Models;
-using authorization_service.Models.User_DTOs;
 using authorization_service.Repositories;
 
 namespace authorization_service.Services;
