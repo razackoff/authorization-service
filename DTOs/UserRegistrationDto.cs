@@ -1,4 +1,4 @@
-namespace authorization_service.Models.User_DTOs;
+namespace authorization_service.DTOs;
 
 public class UserRegistrationDto
 {

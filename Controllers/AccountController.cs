@@ -1,4 +1,4 @@
-using authorization_service.Models.User_DTOs;
+using authorization_service.DTOs;
 using authorization_service.Services;
 using authorization_service.Services.JWT;
 using Microsoft.AspNetCore.Mvc;
