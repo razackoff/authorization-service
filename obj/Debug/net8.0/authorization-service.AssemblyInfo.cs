@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("authorization-service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08b633ae77a0b5442b501f6a50a5b4f88b6375f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1deb74dff602225e4fe4e8a2845c616ebedebd50")]
 [assembly: System.Reflection.AssemblyProductAttribute("authorization-service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("authorization-service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
