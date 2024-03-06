@@ -19,7 +19,8 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
     
-    [Authorize]
+    //[Authorize(Roles = "User")]
+    //[Authorize]
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {

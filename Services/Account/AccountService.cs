@@ -1,3 +1,4 @@
+using System.Security.Authentication;
 using authorization_service.DTOs;
 using authorization_service.Models;
 using authorization_service.Repositories;
@@ -34,19 +35,43 @@ public class AccountService : IAccountService
         // Получить пользователя по его логину (или email)
         var user = await _userRepository.GetByEmailAsync(model.Email);
 
-        // Проверить, найден ли пользователь и соответствует ли пароль
-        if (user != null)
+        // Проверить, найден ли пользователь
+        if (user == null)
         {
-            // Вернуть пользователя в качестве результата аутентификации
-            return user;
-        }
-        else
-        {
-            // Вернуть null, если аутентификация не удалась
+            // Если пользователь не найден, возвращаем null
             return null;
         }
+
+        // Проверить соответствие пароля
+        if (user.Password != model.Password)
+        {
+            // Если пароль не совпадает, возвращаем null
+            return null;
+        }
+
+        // Если пользователь найден и пароль совпадает, возвращаем пользователя
+        return user;
     }
     
+    
+    public async Task ChangePasswordAsync(UserPasswordChangeDto userPasswordChangeDto)
+    {
+        var user = await _userRepository.GetByEmailAsync(userPasswordChangeDto.Email);
+        if (user == null)
+        {
+            throw new ApplicationException("User not found.");
+        }
+
+        // Проверяем текущий пароль
+        if (userPasswordChangeDto.CurrentPassword != user.Password)
+        {
+            throw new ApplicationException("Current password is incorrect.");
+        }
+
+        // Обновляем пароль
+        user.Password = userPasswordChangeDto.NewPassword;
+        await _userRepository.UpdateAsync(user);
+    }
     
     public async Task DeleteAsync(string userId)
     {

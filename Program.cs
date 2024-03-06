@@ -1,8 +1,11 @@
 using System.Text;
 using authorization_service.Data;
+using authorization_service.DTOs;
 using authorization_service.Repositories;
 using authorization_service.Services;
 using authorization_service.Services.JWT;
+using authorization_service.Validators;
+using FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -63,6 +66,11 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddSingleton<IJwtService>(provider => 
     new JwtService(jwtSecret, jwtLifetime));
+
+
+builder.Services.AddTransient<IValidator<UserRegistrationDto>, UserRegistrationValidator>();
+builder.Services.AddTransient<IValidator<UserLoginDto>, UserLoginValidator>();
+builder.Services.AddTransient<IValidator<UserPasswordChangeDto>, UserPasswordChangeValidator>();
 
 
 builder.Services.AddAuthentication(options =>

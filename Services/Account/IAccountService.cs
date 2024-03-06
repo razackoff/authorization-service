@@ -7,5 +7,6 @@ public interface IAccountService
 {
     Task<User> RegisterAsync(UserRegistrationDto model);
     Task<User> AuthenticateAsync(UserLoginDto model);
+    Task ChangePasswordAsync(UserPasswordChangeDto userPasswordChangeDto);
     Task DeleteAsync(string userId);
 }
